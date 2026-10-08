@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --gold-clr:hsl(31, 77%, 52%);
+      --cyan-clr:hsl(184, 100%, 22%);
+      --green-clr:hsl(179, 100%, 13%);
+      --white-prgph:hsla(0, 0%, 100%, 0.75);
+      --gray-clr:hsl(0, 0%, 95%);
+    }
+    body {
+      display: grid;
+      place-items: center;
+      background-color: var(--gray-clr);
+      box-sizing: border-box;
+      margin:0;
+      min-height: 100vh;
+    }
+    main {
+      display: grid;
+      place-items: center;
+
+    }
+    .cards {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-inline: 15%;
+    }
+    .card-sedans {
+      background-color: var(--gold-clr);
+      border-radius: 0.7rem 0 0 0.7rem;
+    }
+    .card-suvs {
+      background-color: var(--cyan-clr);
+    }
+    .card-luxury {
+      background-color: var(--green-clr);
+      border-radius: 0 0.7rem 0.7rem 0;
+    }
+    .name {
+      font-size: 2.5rem;
+     color: var(--gray-clr);
+     font-family: "Big Shoulders Display", sans-serif;
+     font-weight: 700;
+     margin-block:2rem;
+    }
+    .card {
+      padding-inline: 3rem;
+      padding-block: 3rem;
+    }
+    .card p {
+      font-size: 1rem;
+      color: var(--white-prgph);
+       font-family: "Lexend Deca", sans-serif;
+      line-height: 1.7rem;
+    }
+    .button {
+      margin-block-start: 4rem;
+      padding-block:1rem;
+      padding-inline: 1.7rem;
+      border-radius: 2rem;
+      background: none;
+      background-color: var(--gray-clr);
+      border-color: var(--gray-clr);
+      border-style: solid;
+    }
+    button {
+      font-weight: 700;
+        }
+    .button-sedans {
+      color:var(--gold-clr);
+    }
+    .button-suvs {
+      color: var(--cyan-clr);
+    }
+    .button-luxury {
+      color:var(--green-clr);
+    }
+    .button-sedans:hover {
+      background-color: var(--gold-clr);
+      color:var(--gray-clr);
+      border-color: var(--gray-clr);
+      border-style: solid;
+      cursor:pointer;
+    }
+    .button-suvs:hover {
+      background-color: var(--cyan-clr);
+      color:var(--gray-clr);
+      border-color:var(--gray-clr);
+      border-style: solid;
+      cursor:pointer;
+    }
+    .button-luxury:hover {
+      background-color: var(--green-clr);
+      color: var(--gray-clr);
+      border-color: var(--gray-clr);
+      border-style: solid;
+      cursor: pointer;
+    }
+
+    @media (max-width: 42.5rem) {
+      .cards {
+        flex-direction: column;
+        margin-inline: 1.4rem;
+        margin-block:5rem;
+
+      }
+      .card-sedans {
+        border-radius: 0.7rem 0.7rem 0 0;
+      }
+      .card-luxury {
+        border-radius: 0 0 0.7rem 0.7rem;
+      }
+      .button {
+        margin-block-start: 0.5rem;
+      }
+      .card {
+        padding-block-end: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+  
+    <div class="cards">
+
+      <article class="card card-sedans">
+      <div class="img-block">
+        <img src="icon-sedans.svg" alt="">
+      </div>
+ <h2 class="name"> SEDANS</h2>
+  <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+  or on your next road trip.</p>
+  <button type="button" class="button button-sedans">Learn more</button>
+      </article>
+
+  <article class="card card-suvs">
+    <div class="img-block">
+      <img src="icon-suvs.svg" alt="">
+    </div>
+  <h2 class="name">SUVS</h2>
+ <p> Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures.</p>
+  <button type="button" class="button button-suvs">Learn more</button>
+ </article>
+
+  <article class="card card-luxury">
+    <div class="img-block">
+      <img src="icon-luxury.svg" alt="">
+    </div>
+  <h2 class="name">LUXURY</h2>
+ <p> Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style.</p>
+  <button type="button" class="button button-luxury">Learn more</button>
+ </article>
+
+  </div>
+  </main>
+</body>
+</html>
